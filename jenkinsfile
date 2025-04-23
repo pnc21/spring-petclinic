@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/pnc21/spring-petclinic.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh './mvnw clean install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh './mvnw test'
+            }
+        }
+    }
+}
