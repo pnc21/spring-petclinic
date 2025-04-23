@@ -1,0 +1,13 @@
+# Ignore everything not needed in Docker context
+.git
+.gitignore
+terraform/
+*.md
+.idea/
+.vscode/
+.gradle/
+*.log
+target/
+build/
+Dockerfile
+docker-compose.yml
