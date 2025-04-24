@@ -28,8 +28,8 @@ agent any
         } 
         stage('Push to Docker Hub') { 
             steps { 
-                withDockerRegistry([credentialsId: 'dockerhub-creds']) { 
-                    sh 'docker push $DOCKER_IMAGE' 
+                withDockerRegistry([credentialsId: 'dockerhub-creds', url: 'https://index.docker.io/v1/']) {
+            sh 'docker push pnc21/spring-petclinic:latest'
                 } 
             } 
         } 
