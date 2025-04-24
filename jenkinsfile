@@ -5,9 +5,8 @@ agent any
         maven 'Maven 3.8.1' 
     } 
  
-    environment { 
-        DOCKER_IMAGE = "pnc21/spring-petclinic/.devcontainer:${8bersd0p6bdoxkxfeglfyy0ys}" 
-        
+    environment {
+        DOCKER_IMAGE = "pnc21/spring-petclinic:latest"   
     } 
  
     stages { 
