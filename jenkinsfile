@@ -35,8 +35,7 @@ agent any
         } 
         stage('Deploy to Kubernetes') { 
             steps { 
-                sh 'kubectl set image deployment/sample-app-deployment 
-sample-container=$DOCKER_IMAGE' 
+                sh 'kubectl set image deployment/spring-petclinic/.devcontainer sample-container=$DOCKER_IMAGE' 
             } 
         } 
     } 
